@@ -23,6 +23,6 @@ const credential: Credential = {
   awardedAt: new Date()
 };
 
-const certificate = <Certificate credential={credential} />;
+const certificate = <Certificate {...credential} />;
 
 ReactPDF.render(certificate, `certificates/${Date.now()}.pdf`);

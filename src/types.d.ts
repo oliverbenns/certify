@@ -1,4 +1,5 @@
 declare module "@react-pdf/renderer";
+declare module "@react-pdf/styled-components";
 
 interface User {
   firstName: string;
