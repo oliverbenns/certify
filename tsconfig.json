@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "types": ["node"],
+    "module": "esnext"
   }
 }

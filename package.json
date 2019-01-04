@@ -20,6 +20,9 @@
   "homepage": "https://github.com/oliverbenns/certify#readme",
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "@types/node": "^10.12.18",
     "@types/react": "^16.7.18",
     "babel": "^6.23.0",
     "babel-loader": "^8.0.5",
@@ -30,9 +33,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
-    "@babel/preset-env": "^7.2.3",
-    "@babel/preset-react": "^7.0.0",
-    "babel-polyfill": "^6.26.0",
+    "@react-pdf/renderer": "^1.1.1",
     "react": "^16.7.0"
   }
 }

@@ -1,16 +1,12 @@
 import * as React from "react";
-import log from "./log";
+import * as fs from "fs";
+import ReactPDF from "@react-pdf/renderer";
+import Certificate from "./certificate";
 
-console.log("foo");
+const dir = "./certificates";
 
-const Foo = () => {
-  return (
-    <div>
-      <p>Hello World</p>
-    </div>
-  );
-};
+if (!fs.existsSync(dir)) {
+  fs.mkdirSync(dir);
+}
 
-console.log("Foo", Foo);
-
-log();
+ReactPDF.render(<Certificate />, `certificates/${Date.now()}.pdf`);
