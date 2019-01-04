@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    // Preserve es2015 import
+    "target": "es2015",
+
+    // Preserve dynamic import
+    "module": "esnext",
+    "jsx": "preserve",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node"
+  }
+}
