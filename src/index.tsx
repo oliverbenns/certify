@@ -9,4 +9,20 @@ if (!fs.existsSync(dir)) {
   fs.mkdirSync(dir);
 }
 
-ReactPDF.render(<Certificate />, `certificates/${Date.now()}.pdf`);
+const user: User = {
+  firstName: "John",
+  lastName: "Doe"
+};
+
+const credential: Credential = {
+  user,
+  title: "Mollit anim id est laborum",
+  description:
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
+  id: "abc",
+  awardedAt: new Date()
+};
+
+const certificate = <Certificate credential={credential} />;
+
+ReactPDF.render(certificate, `certificates/${Date.now()}.pdf`);

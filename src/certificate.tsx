@@ -14,14 +14,17 @@ const styles = StyleSheet.create({
   }
 });
 
-const Certificate = () => (
+interface CertificateProps {
+  credential: Credential;
+}
+
+const Certificate: React.SFC<CertificateProps> = props => (
   <Document>
-    <Page style={styles.page}>
+    <Page orientation="landscape" style={styles.page}>
       <View style={styles.section}>
-        <Text>Section #1</Text>
-      </View>
-      <View style={styles.section}>
-        <Text>Section #2</Text>
+        <Text>
+          {props.credential.user.firstName} {props.credential.user.lastName}
+        </Text>
       </View>
     </Page>
   </Document>
